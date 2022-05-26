@@ -45,6 +45,7 @@ class MovieShotsInline(admin.TabularInline):
 class MovieAdmin(admin.ModelAdmin):
     """Фильмы"""
     list_display = ('title', 'category', 'url', 'draft')
+    prepopulated_fields = {'url': ('title',)}
     list_filter = ('category', 'year')
     search_fields = ('title', 'category__name')
     inlines = [MovieShotsInline, ReviewInline]
