@@ -44,8 +44,7 @@ INSTALLED_APPS = [
     'movies',
     'contact',
     'allauth',
-    'allauth.account',
-    # 'allauth.socialaccount'
+    'allauth.account'
 ]
 
 MIDDLEWARE = [
